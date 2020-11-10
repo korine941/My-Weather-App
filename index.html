@@ -1,17 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"/>
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="MyWeatherApp/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/6a727a8566.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <h1>
-        My git hub
-    </h1>
-    <script src="script.js"></script>
+    <div class="container">
+        <div class="enter-city">
+            <div class="row">
+                <div class="col-6 city-time-date">
+                    <p id="current-city">Current date & time:</p>
+                    <p id="date-time">Current Date & Time</p>
+                </div>
+                <div class="col-6">
+                    <form class="form-inline" id="city-form">
+                        <div class="form-group">
+                            <input type="search" class="form-control" id="city-input" aria-describedby="cityHelp"
+                                placeholder="Enter your city" autocomplete="off" autofocus="on">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary" value="Search">Search</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="todays-weather">
+            <div class="row">
+                <div class="col-6">
+                    <span class="current-temp" id="current-temp"></span>
+                    <span class="units">
+                        <a href="#" id="fahrenheit-link">°F</a> |
+                        <a href="#" id="celsius-link">°C</a>
+
+                    </span>
+                    <p id="other-info">
+                        Precip. Info
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="day">
+                        <p>Sunday</p>
+                        <i class="fas fa-sun"></i>
+                        <p>82°C</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="day">
+                        <p>Monday</p>
+                        <i class="fas fa-cloud-sun-rain"></i>
+                        <p>71°C</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="day">
+                        <p>Tuesday</p>
+                        <i class="fas fa-cloud-sun-rain"></i>
+                        <p>58°C</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="day">
+                        <p>Wensday</p>
+                        <i class="fas fa-cloud-sun-rain"></i>
+                        <p>68°C</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="day">
+                        <p>Thursday</p>
+                        <i class="fas fa-sun"></i>
+                        <p>70°C</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="MyWeatherApp/index.js"></script>
 </body>
-</html>
+
 
 

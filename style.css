@@ -1,4 +1,178 @@
-h {
-  color: brown;
+body {
+  background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+  font-family: Cerebri Sans, Helvetica, Arial, sans-serif;
+}
+
+p,
+.form-control,
+.btn-primary {
+  font-family: Cerebri Sans, Helvetica, Arial, sans-serif;
+  color: #062e20;
+}
+
+i {
+  color: #757575;
+}
+
+a {
+  color: #29270c !important;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
+
+.container {
+  border: solid 1px #bdbdbd;
+  width: 100%;
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+  padding-bottom: 35px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  padding-top: 25px;
+}
+
+.city-time-date {
+  margin-top: 1.75%;
+}
+
+#date-time,
+#current-city {
+  margin-left: 5%;
+  margin-bottom: 0 !important;
+  color: #ffffff;
+}
+
+.enter-city {
+  background: rgb(196, 85, 22);
+}
+
+.form-inline {
+  display: inline;
+  float: right;
+  margin: 5% 5% 5% 0;
+}
+
+.form-inline .form-group {
+  display: inline-block;
+}
+
+.form-control {
+  padding-right: 1%;
+}
+
+.btn.btn-primary {
+  color: #fff;
+  background-color: rgb(136, 103, 103);
+  border-color: #9b5050;
+  margin-left: 5px;
+}
+
+.btn.btn-primary:hover {
+  color: #fff;
+  background-color: #607d8b;
+  border-color: #ffffff;
+  transition: ease-in-out;
+}
+
+.current-temp {
+  font-family: Cerebri Sans, Helvetica, Arial, sans-serif;
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.units {
+  position: relative;
+  top: -23px;
+  color: black;
+}
+
+.todays-weather {
+  padding-left: 5%;
+}
+
+.todays-weather i {
+  font-size: 6em;
+  text-align: right;
+  padding-right: 40%;
+}
+
+.col.line {
+  border-left: solid 1px #bdbdbd;
+  border-right: solid 1px #bdbdbd;
+}
+
+.col.day-section-label {
+  border: none;
+  padding-left: 0;
+}
+
+.day-section-label p {
+  display: block;
+  padding-top: 45%;
+  padding-bottom: 45%;
+  margin: 0 auto;
+}
+
+.day p {
   text-align: center;
+}
+
+.day i {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  font-size: 2em;
+  padding-bottom: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .form-inline .form-group {
+    width: 100%;
+    margin-bottom: 0 !important;
+  }
+
+  .form-inline .form-control {
+    width: 100% !important;
+  }
+
+  .btn.btn-primary {
+    margin-left: 0;
+    margin-top: 5px !important;
+    width: 100%;
+  }
+
+  .city-time-date {
+    margin-top: 9%;
+  }
+}
+
+@media only screen and (max-width: 475px) {
+  .city-time-date {
+    font-size: 0.9rem;
+    margin-top: 10%;
+  }
+
+  .todays-weather i {
+    padding-right: 10%;
+    text-align: left;
+    padding-left: 5%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .city-time-date {
+    font-size: 1rem;
+    margin-top: 3%;
+  }
 }
