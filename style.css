@@ -176,3 +176,8 @@ a:active {
     margin-top: 3%;
   }
 }
+
+img {
+  max-width: 20%;
+  height: auto;
+}
