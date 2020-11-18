@@ -62,10 +62,13 @@ function showWeather(response) {
   document.querySelector("#current-temp").innerHTML = Math.round(
     (response.data.main.temp * 9) / 5 + 32
   );
-  document.querySelector(
-    "#other-info"
-  ).innerHTML = `${response.data.weather[0].description} with a humidity of ${response.data.main.humidity}%`;
+  
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
 
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  
   // Convert Temp
   function convertTempC(event) {
     event.preventDefault();
@@ -87,7 +90,7 @@ function showWeather(response) {
 }
 
 function searchCity(city) {
-  let apiKey = "809f83a3c3f1056fc8bafdb178a866cc";
+  let apiKey = "6c58800525f462282dc866a535006408";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
   axios.get(apiUrl).then(showWeather);
 }
