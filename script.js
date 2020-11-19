@@ -45,43 +45,12 @@ dateTime.innerHTML = `${day}, ${month} ${date}, ${year} ${formatAMPM(
   new Date()
 )}`;
 
-function dispalyForecast(response) {
-  let forecastElement = document.querySelector("#forecast");
-  forecastElement.innerHTML = null;
-  let forecast = null;
-
-  for (let index = 0; index < 6; index++) {
-    forecast = response.data.list[index];
-    forecastElement.innerHTML += `
-    <div class="col-2">
-      <h3>
-        ${formatHours(forecast.dt * 1000)}
-      </h3>
-      <img
-        src="http://openweathermap.org/img/wn/${
-          forecast.weather[0].icon
-        }@2x.png"
-      />
-      <div class="weather-forecast-temperature">
-        <strong>
-          ${Math.round(forecast.main.temp_max)}°
-        </strong>
-        ${Math.round(forecast.main.temp_min)}°
-      </div>
-    </div>
-  `;
-  }
-}
-
 function getPosition(position) {
   let lat = Math.round(position.coords.latitude);
   let lon = Math.round(position.coords.longitude);
   let apiKey = "6c58800525f462282dc866a535006408";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
   axios.get(apiUrl).then(showWeather);
-
-  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(dispalyForecast);
 }
 
 navigator.geolocation.getCurrentPosition(getPosition);
