@@ -88,7 +88,7 @@ navigator.geolocation.getCurrentPosition(getPosition);
 
 function showWeather(response) {
   document.querySelector(
-    "#current-city"
+    "#current-city" 
   ).innerHTML = `${response.data.name} weather as of`;
   document.querySelector("#current-temp").innerHTML = Math.round(
     (response.data.main.temp * 9) / 5 + 32
