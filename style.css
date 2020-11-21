@@ -24,7 +24,7 @@ a:hover {
 
 a:active {
   text-decoration: underline;
-  color: blue;
+  color: rgb(21, 21, 54);
 }
 
 .container {
